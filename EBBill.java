@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Bill1 {
+public class EBBill {
     public static void main(String[] args) {
         int a, d;
         String name;
