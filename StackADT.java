@@ -87,7 +87,7 @@ class TextEditor {
     }
 }
 
-public class StackADT {
+public class StaAD {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         TextEditor editor = new TextEditor(new ArrayStack<>(100));
