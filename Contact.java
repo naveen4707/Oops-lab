@@ -1,5 +1,5 @@
-import java.util.ArrayList;
-import java.util.Scanner;
+
+import java.util.*;
 
 public class Contact {
     public static void main(String[] args) {
@@ -7,7 +7,7 @@ public class Contact {
         ArrayList<String> contacts = new ArrayList<>();
         int choice;
 
-        do {
+        while(true) {
             System.out.println("\n--- Contact Management ---");
             System.out.println("1. Add Contact");
             System.out.println("2. View Contacts");
@@ -17,22 +17,20 @@ public class Contact {
             choice = sc.nextInt();
             sc.nextLine(); // Clear input
 
-            switch (choice) {
-                case 1:
+            if (choice==1){
                     System.out.print("Enter contact name: ");
                     String name = sc.nextLine();
                     contacts.add(name);
                     System.out.println("Contact added.");
-                    break;
+                }
 
-                case 2:
+            else if (choice==2){
                     System.out.println("Contacts List:");
                     for (String contact : contacts) {
                         System.out.println(contact);
                     }
-                    break;
-
-                case 3:
+            }
+            else if (choice==3){
                     System.out.print("Enter name to delete: ");
                     String delName = sc.nextLine();
                     if (contacts.remove(delName)) {
@@ -40,15 +38,13 @@ public class Contact {
                     } else {
                         System.out.println("Contact not found.");
                     }
-                    break;
-
-                case 4:
+                    }
+            else if(choice==4){
                     System.out.println("Exiting program.");
-                    break;
-
-                default:
+                }        
+            else{
                     System.out.println("Invalid choice!");
             }
-        } while (choice != 4);
+        }
     }
 }
