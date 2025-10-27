@@ -15,7 +15,7 @@ public class Contact {
             System.out.println("4. Exit");
             System.out.print("Enter your choice: ");
             choice = sc.nextInt();
-            sc.nextLine(); // Clear input
+            sc.nextLine(); 
 
             if (choice==1){
                     System.out.print("Enter contact name: ");
